@@ -41,8 +41,8 @@ def build_model():
 '''
 Split image folders into train and validation 
 '''
-df_image_folder_names = pd.read_excel('index_with_fold_names_without_ferrocene.xlsx', index_col=0)
-df_test_index = pd.read_excel('testset_index_without_ferrocence.xlsx', index_col=0)
+df_image_folder_names = pd.read_excel('index_with_fold_names.xlsx', index_col=0)
+df_test_index = pd.read_excel('testset_index.xlsx', index_col=0)
 
 test_index = df_test_index['testset_index'].values
 train_index = [x for x in df_image_folder_names.index if x not in test_index]
